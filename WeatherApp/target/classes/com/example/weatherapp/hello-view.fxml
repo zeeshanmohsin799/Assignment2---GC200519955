@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.VBox?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ScrollBar?>
+<VBox alignment="CENTER" spacing="20.0" xmlns:fx="http://javafx.com/fxml"
+      fx:controller="com.example.weatherapp.HelloController"  style="-fx-background-color: lightblue;">
+    <padding>
+        <Insets bottom="20.0" left="20.0" right="20.0" top="20.0"/>
+    </padding>
+
+    <GridPane>
+        <columnConstraints>
+            <ColumnConstraints hgrow="NEVER"/>
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="50"/>
+            <ColumnConstraints hgrow="ALWAYS"/>
+        </columnConstraints>
+        <rowConstraints>
+            <RowConstraints vgrow="NEVER"/>
+            <RowConstraints vgrow="NEVER"/>
+            <RowConstraints vgrow="NEVER"/>
+            <RowConstraints vgrow="NEVER"/>
+            <RowConstraints vgrow="NEVER"/>
+            <RowConstraints vgrow="NEVER"/>
+            <RowConstraints vgrow="NEVER"/>
+            <RowConstraints vgrow="NEVER"/>
+            <RowConstraints vgrow="NEVER"/>
+        </rowConstraints>
+
+        <Label text="Welcome to my Weather Forecasting Application" GridPane.columnIndex="1" GridPane.rowIndex="0" GridPane.columnSpan="2"
+               style="-fx-font-family: 'Times New Roman';
+               -fx-font-size: 20px;
+               -fx-font-weight: bold;
+               -fx-text-fill: darkblue;
+"/>
+
+        <TextField fx:id="cityTextField" GridPane.columnIndex="0" GridPane.rowIndex="0" promptText="Enter city name" style="-fx-border-color: green; -fx-font-family: 'Times New Roman';  "/>
+
+        <Button text="Check Weather" onAction="#onHelloButtonClick" GridPane.columnIndex="0" GridPane.rowIndex="1" style="-fx-border-radius: 10px; -fx-font-size: 15px; -fx-font-family: 'Arial Black'; -fx-border-radius: 5px; -fx-border-color: black; -fx-background-color: lightgreen;">
+            <GridPane.margin>
+                <Insets top="10"/>
+            </GridPane.margin>
+        </Button>
+        <Label text="Weather conditions of given city currently are as below." GridPane.columnIndex="1" GridPane.rowIndex="1" GridPane.columnSpan="2" style="-fx-font-size: 15px; -fx-font-family: 'Times New Roman'"/>
+        <Label fx:id="cityNameLabel" GridPane.columnIndex="2" GridPane.rowIndex="1" GridPane.columnSpan="2"/>
+
+
+        <Label text="Temperature:" GridPane.columnIndex="1" GridPane.rowIndex="2" style="-fx-font-size: 14px; -fx-font-weight: bold; "/>
+        <Label fx:id="temperatureLabel" GridPane.columnIndex="2" GridPane.rowIndex="2" style="-fx-font-weight: bold; -fx-text-fill: tan;"/>
+
+        <Label text="Max Temperature:" GridPane.columnIndex="1" GridPane.rowIndex="3" style="-fx-font-size: 14px; -fx-font-weight: bold;"/>
+        <Label fx:id="maxTemperatureLabel" GridPane.columnIndex="2" GridPane.rowIndex="3"  style="-fx-font-weight: bold; -fx-text-fill: tan;"/>
+
+        <Label text="Min Temperature:" GridPane.columnIndex="1" GridPane.rowIndex="4" style="-fx-font-size: 14px; -fx-font-weight: bold;"/>
+        <Label fx:id="minTemperatureLabel" GridPane.columnIndex="2" GridPane.rowIndex="4"  style="-fx-font-weight: bold; -fx-text-fill: tan;"/>
+
+        <Label text="Humidity:" GridPane.columnIndex="1" GridPane.rowIndex="5" style="-fx-font-size: 14px; -fx-font-weight: bold;"/>
+        <Label fx:id="humidityLabel" GridPane.columnIndex="2" GridPane.rowIndex="5"  style="-fx-font-weight: bold; -fx-text-fill: tan;"/>
+
+        <Label text="Description:" GridPane.columnIndex="1" GridPane.rowIndex="6" style="-fx-font-size: 14px; -fx-font-weight: bold;"/>
+        <Label fx:id="descriptionLabel" GridPane.columnIndex="2" GridPane.rowIndex="6"  style="-fx-font-weight: bold; -fx-text-fill: tan;"/>
+
+        <Label text="countryCode: " GridPane.columnIndex="1" GridPane.rowIndex="7" style="-fx-font-size: 14px; -fx-font-weight: bold;"/>
+        <Label fx:id="countryCodeLabel" GridPane.columnIndex="2" GridPane.rowIndex="7" GridPane.columnSpan="2"  style="-fx-font-weight: bold; -fx-text-fill: tan;"/>
+
+        <Label text="windSpeed: " GridPane.columnIndex="1" GridPane.rowIndex="8" style="-fx-font-size: 14px; -fx-font-weight: bold;"/>
+        <Label fx:id="windSpeedLabel" GridPane.columnIndex="2" GridPane.rowIndex="8" GridPane.columnSpan="2"  style="-fx-font-weight: bold; -fx-text-fill: tan;"/>
+
+        <Label text="windDegreee: " GridPane.columnIndex="1" GridPane.rowIndex="9" style="-fx-font-size: 14px; -fx-font-weight: bold;"/>
+        <Label fx:id="windDegreeLabel" GridPane.columnIndex="2" GridPane.rowIndex="9" GridPane.columnSpan="2"  style="-fx-font-weight: bold; -fx-text-fill: tan;"/>
+    </GridPane>
+</VBox>
